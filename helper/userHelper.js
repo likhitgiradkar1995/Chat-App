@@ -1,8 +1,5 @@
-// helper/userHelper.js
-
 const users = [];
 
-// Join user to chat
 function newUser(id, username, room) {
   const user = { id, username, room };
 
@@ -11,12 +8,10 @@ function newUser(id, username, room) {
   return user;
 }
 
-// Get current user
 function getActiveUser(id) {
   return users.find((user) => user.id === id);
 }
 
-// User leaves chat
 function exitRoom(id) {
   const index = users.findIndex((user) => user.id === id);
 
@@ -25,7 +20,6 @@ function exitRoom(id) {
   }
 }
 
-// Get room users
 function getIndividualRoomUsers(room) {
   return users.filter((user) => user.room === room);
 }
